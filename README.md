@@ -29,7 +29,7 @@ A new UI for git. With less pain.
 * Figure out what the best docs are
 * Use revision numbers like `hg` does
 
-## Unallowed git jargon
+## Banned git jargon
 
 All of this is "under the hood" stuff. We don't need to worry about it.
 
@@ -48,7 +48,6 @@ All of this is "under the hood" stuff. We don't need to worry about it.
 3. Be centralized (use git if you want to be distributed)
 4. No work should ever be lost
 5. There is no need to be upset
-
 
 ## Commands
 
