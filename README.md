@@ -53,16 +53,16 @@ Trying to get this out of my head and on...paper?
 
 | Command | Explanation |
 | ------- | ----------- |
-| `jaw help <command>` | Gives help! |
-| `jaw --help <command>` | Also gives help as we are too used to Unixy commands |
-| `jaw setup` | Asks for and stores user name and email |
-| `jaw start [URL, directory, default = .]` | Starts a repo off |
-| `jaw undo` | Undo the last constructive/destructive command. Can also undo an undo. |
-| `jaw load [file, directory, default = .]` | Loads the pallet with a file to be checked in |
-| `jaw pack [message, open $EDITOR]` | Pack up this pallet for shipping. |
-| `jaw pallet` | See what's on your pallet. |
-| `jaw ship` | Send your unshipped pallets off |
-| `jaw unshipped` | See what pallets haven't been shipped yet |
+| `shp help <command>` | Gives help! |
+| `shp --help <command>` | Also gives help as we are too used to Unixy commands |
+| `shp setup` | Asks for and stores user name and email |
+| `shp start [URL, directory, default = .]` | Starts a repo off |
+| `shp undo` | Undo the last constructive/destructive command. Can also undo an undo. |
+| `shp load [file, directory, default = .]` | Loads the pallet with a file to be checked in |
+| `shp pack [message, open $EDITOR]` | Pack up this pallet for shipping. |
+| `shp pallet` | See what's on your pallet. |
+| `shp ship` | Send your unshipped pallets off |
+| `shp unshipped` | See what pallets haven't been shipped yet |
 
 # Undo
 
@@ -70,8 +70,8 @@ Every command that changes things must have an undo.
 
 | Last Command Ran | Explanation |
 | ---------------- | ----------- |
-| `jaw start` | Offers to remove the repo |
-| `jaw undo` | Undo the last undo |
-| `jaw load` | Removes that file from the pallet |
-| `jaw pack` | Unwrap the pallet and stop it from being shipped |
-| `jaw ship` | Reverts to the last shipped pallet |
+| `shp start` | Offers to remove the repo |
+| `shp undo` | Undo the last undo |
+| `shp load` | Removes that file from the pallet |
+| `shp pack` | Unwrap the pallet and stop it from being shipped |
+| `shp ship` | Reverts to the last shipped pallet |
