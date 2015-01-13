@@ -19,6 +19,7 @@ A new UI for git. With less pain.
 * Provide undo for *all* destructive commands
 * Smart defaults and aliases out of the box
 * Banish the use of SHAs (not human!)
+* Keep the index but use the loading dock metaphor
 
 ## Implementation Ideas
 
@@ -26,3 +27,10 @@ A new UI for git. With less pain.
 * Test suite in Ruby - because why not
 * Provide binaries for Win/OSX/Linux
 * Figure out what the best docs are
+
+## Commands
+
+Trying to get this out of my head and on...paper?
+
+Command | Explanation
+`jaw start` | Starts a repo off
