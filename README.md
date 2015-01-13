@@ -59,10 +59,10 @@ Trying to get this out of my head and on...paper?
 | `jaw help <command>` | Gives help! |
 | `jaw --help <command>` | Also gives help as we are too used to Unixy commands |
 | `jaw setup` | Asks for and stores user name and email |
-| `jaw start [URL | directory | default = .]` | Starts a repo off |
+| `jaw start [URL, directory, default = .]` | Starts a repo off |
 | `jaw undo` | Undo the last constructive/destructive command. Can also undo an undo. |
-| `jaw load [file | directory | default = .]` | Loads the pallet with a file to be checked in |
-| `jaw pack [message | open $EDITOR]` | Pack up this pallet for shipping. |
+| `jaw load [file, directory, default = .]` | Loads the pallet with a file to be checked in |
+| `jaw pack [message, open $EDITOR]` | Pack up this pallet for shipping. |
 | `jaw pallet` | See what's on your pallet. |
 | `jaw ship` | Send your unshipped pallets off |
 | `jaw unshipped` | See what pallets haven't been shipped yet |
