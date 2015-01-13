@@ -27,6 +27,7 @@ A new UI for git. With less pain.
 * Test suite in Ruby - because why not
 * Provide binaries for Win/OSX/Linux
 * Figure out what the best docs are
+* Use revision numbers like `hg` does
 
 ## Unallowed git jargon
 
@@ -39,8 +40,6 @@ All of this is "under the hood" stuff. We don't need to worry about it.
 * staging area
 * index
 * remote
-* clone
-* CONSIDER: Repo?
 
 ## Essential concepts
 
@@ -49,6 +48,7 @@ All of this is "under the hood" stuff. We don't need to worry about it.
 3. Be centralized (use git if you want to be distributed)
 4. No work should ever be lost
 5. There is no need to be upset
+
 
 ## Commands
 
