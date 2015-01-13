@@ -54,8 +54,8 @@ All of this is "under the hood" stuff. We don't need to worry about it.
 
 Trying to get this out of my head and on...paper?
 
-| Command | Explanation
----------------------
+| Command | Explanation |
+| ------- | ----------- |
 | `jaw help <command>` | Gives help! |
 | `jaw --help <command>` | Also gives help as we are too used to Unixy commands |
 | `jaw setup` | Asks for and stores user name and email |
@@ -72,7 +72,7 @@ Trying to get this out of my head and on...paper?
 Every command that changes things must have an undo.
 
 | Last Command Ran | Explanation |
-----------------------------------
+| ---------------- | ----------- |
 | `jaw start` | Offers to remove the repo |
 | `jaw undo` | Undo the last undo |
 | `jaw load` | Removes that file from the pallet |
