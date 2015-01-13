@@ -1,6 +1,6 @@
 # lockjaw
 
-![tetanus-lockjaw-victim-the-contracted-everett](https://cloud.githubusercontent.com/assets/12610/5716125/5ee2ad54-9ab4-11e4-8f09-31aa64251b0d.jpg)
+![](https://tarangini.files.wordpress.com/2011/05/headmuscles1.jpg)
 
 A new UI for git. With less pain.
 
@@ -28,9 +28,51 @@ A new UI for git. With less pain.
 * Provide binaries for Win/OSX/Linux
 * Figure out what the best docs are
 
+## Unallowed git jargon
+
+All of this is "under the hood" stuff. We don't need to worry about it.
+
+* SHA
+* commit
+* tree(ish)
+* blob
+* staging area
+* index
+* remote
+* clone
+
+## Essential concepts
+
+1. Everything is undoable
+2. Checking in work is akin to loading it on a truck for delivery
+3. Be centralized (use git if you want to be distributed)
+4. No work should ever be lost
+5. There is no need to be upset
+
 ## Commands
 
 Trying to get this out of my head and on...paper?
 
 Command | Explanation
-`jaw start` | Starts a repo off
+---------------------
+`jaw help <command>` | Gives help!
+`jaw --help <command>` | Also gives help as we are too used to Unixy commands
+`jaw setup` | Asks for and stores user name and email
+`jaw start <URL | directory | default = .>` | Starts a repo off
+`jaw undo` | Undo the last constructive/destructive command. Can also undo an undo.
+`jaw load <file | directory | default = .>` | Loads the pallet with a file to be checked in
+`jaw pack <message | open $EDITOR>` | Pack up this pallet for shipping.
+`jaw pallet` | See what's on your pallet.
+`jaw ship` | Send your unshipped pallets off
+`jaw unshipped` | See what pallets haven't been shipped yet
+
+# Undo
+
+Every command that changes things must have an undo.
+
+Last Command Ran | Explanation
+`jaw start` | Offers to remove the repo
+`jaw undo` | Undo the last undo
+`jaw load` | Removes that file from the pallet
+`jaw pack` | Unwrap the pallet and stop it from being shipped
+`jaw ship` | Reverts to the last shipped pallet
