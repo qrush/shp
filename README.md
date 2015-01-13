@@ -1,10 +1,8 @@
-# lockjaw
+# shp
 
-![](https://tarangini.files.wordpress.com/2011/05/headmuscles1.jpg)
+![](http://pirates.missiledine.com/images/ships/shipsection.jpg)
 
-A new UI for git. With less pain.
-
-(Also to prove we're all locked into git now for at least another few years. And Rust is neat.)
+A new UI for git. 
 
 ## Goals
 
