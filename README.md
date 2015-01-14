@@ -92,9 +92,10 @@ Trying to get this out of my head and on...paper?
 # What's missing
 
 * How to query ports for docks, remove them
-* Rebasing. That's on purpose.
+* Rebasing. That's on purpose. Merge always. Sorry.
 * Server, daemon, etc. Use git for now.
 * Patches, patch workflow.
+* Ignoring?
 
 # Undo
 
@@ -102,11 +103,10 @@ Every command that changes things must have an undo.
 
 | Last Command Ran | Explanation |
 | ---------------- | ----------- |
-| `shp start` | Offers to remove the repo |
+| `shp start` | Offers to remove the port |
 | `shp undo` | Undo the last undo |
 | `shp load` | Removes that file from the pallet |
 | `shp unload` | Puts that file back on the pallet |
 | `shp pack` | Unwrap the pallet and stop it from being shipped |
-| `shp ship` | Reverts to the last shipped pallet |
-| `shp port [add, remove]` | Add/remove the last removed/added port |
+| `shp send` | Reverts to the last shipped pallet |
 | `shp repack` | Roll back last changed pallet |
