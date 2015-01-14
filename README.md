@@ -61,8 +61,10 @@ Trying to get this out of my head and on...paper?
 | `shp load [file, directory, default = .]` | Loads the pallet with a file to be checked in |
 | `shp pack [message, open $EDITOR]` | Pack up this pallet for shipping. |
 | `shp pallet` | See what's on your pallet. |
-| `shp ship` | Send your unshipped pallets off |
+| `shp ship` | Send your unshipped pallets off. Ship shipping ship ships! |
 | `shp unshipped` | See what pallets haven't been shipped yet |
+| `shp log` | See a log of pallets |
+| `shp port [address]` | Add a new port to ship to |
 
 # Undo
 
