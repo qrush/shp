@@ -34,10 +34,12 @@ All of this is "under the hood" stuff. We don't need to worry about it.
 * SHA
 * commit
 * tree(ish)
+* "ref"
 * blob
 * staging area
 * index
 * remote
+* repo
 
 ## Essential concepts
 
@@ -45,26 +47,54 @@ All of this is "under the hood" stuff. We don't need to worry about it.
 2. Checking in work is akin to loading it on a truck for delivery
 3. Be centralized (use git if you want to be distributed)
 4. No work should ever be lost
-5. There is no need to be upset
+5. Be consistent in how data is added, removed, and renamed
+6. There is no need to be upset
 
 ## Commands
 
 Trying to get this out of my head and on...paper?
+
+### General commands
 
 | Command | Explanation |
 | ------- | ----------- |
 | `shp help <command>` | Gives help! |
 | `shp --help <command>` | Also gives help as we are too used to Unixy commands |
 | `shp setup` | Asks for and stores user name and email |
-| `shp start [URL, directory, default = .]` | Starts a repo off |
+| `shp start [URL, directory, default = .]` | Starts a port off |
 | `shp undo` | Undo the last constructive/destructive command. Can also undo an undo. |
-| `shp load [file, directory, default = .]` | Loads the pallet with a file to be checked in |
+
+### Write commands
+
+| Command | Explanation |
+| ------- | ----------- |
+| `shp [un]load [file, directory, default = .]` | Loads/unload the pallet with a file/directory |
 | `shp pack [message, open $EDITOR]` | Pack up this pallet for shipping. |
+| `shp repack` | Modify your last pack |
+| `shp dock [add|remove|rename|switch] [name]` | Add/remove/rename current dock |
+| `shp port [add|remove|rename|switch] [name] [address]` | Add/remove/rename a port to ship to |
+| `shp send [port] [dock, mark]` | Send your unshipped pallets off. Ship shipping ship ships! |
+| `shp rec[eive] [port] [dock]` | Haul pallets in from a port (or the default port) |
+| `shp mark [add|remove|rename] [name] [message]` | Marks the pallet with a message or for release. |
+
+### Read commands
+
+| Command | Explanation |
+| ------- | ----------- |
 | `shp pallet` | See what's on your pallet. |
-| `shp ship` | Send your unshipped pallets off. Ship shipping ship ships! |
-| `shp unshipped` | See what pallets haven't been shipped yet |
-| `shp log` | See a log of pallets |
-| `shp port [address]` | Add a new port to ship to |
+| `shp dock` | Show current dock (branch) |
+| `shp what [address1] [address2?]` | What is different between the two addresses or your current pallet? |
+| `shp log [type]` | See a log of pallets. Log types: graph, patches, lines |
+| `shp summary` | Get a mini log of everything in this port |
+| `shp view [address]` | See the changes from the pallet at address. |
+| `shp ports` | List ports we can ship to |
+
+# What's missing
+
+* How to query ports for docks, remove them
+* Rebasing. That's on purpose.
+* Server, daemon, etc. Use git for now.
+* Patches, patch workflow.
 
 # Undo
 
@@ -75,5 +105,8 @@ Every command that changes things must have an undo.
 | `shp start` | Offers to remove the repo |
 | `shp undo` | Undo the last undo |
 | `shp load` | Removes that file from the pallet |
+| `shp unload` | Puts that file back on the pallet |
 | `shp pack` | Unwrap the pallet and stop it from being shipped |
 | `shp ship` | Reverts to the last shipped pallet |
+| `shp port [add|remove]` | Add/remove the last removed/added port |
+| `shp repack` | Roll back last changed pallet |
