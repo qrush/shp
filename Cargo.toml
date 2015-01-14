@@ -1,0 +1,9 @@
+[package]
+
+name = "shp"
+version = "0.0.1"
+authors = [ "Nick Quaranto <nick@quaran.to>" ]
+
+[[bin]]
+
+name = "shp"
