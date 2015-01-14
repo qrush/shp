@@ -71,11 +71,11 @@ Trying to get this out of my head and on...paper?
 | `shp [un]load [file, directory, default = .]` | Loads/unload the pallet with a file/directory |
 | `shp pack [message, open $EDITOR]` | Pack up this pallet for shipping. |
 | `shp repack` | Modify your last pack |
-| `shp dock [add|remove|rename|switch] [name]` | Add/remove/rename current dock |
-| `shp port [add|remove|rename|switch] [name] [address]` | Add/remove/rename a port to ship to |
+| `shp dock [add, remove, rename, switch] [name]` | Add/remove/rename current dock |
+| `shp port [add, remove, rename, switch] [name] [address]` | Add/remove/rename a port to ship to |
 | `shp send [port] [dock, mark]` | Send your unshipped pallets off. Ship shipping ship ships! |
 | `shp rec[eive] [port] [dock]` | Haul pallets in from a port (or the default port) |
-| `shp mark [add|remove|rename] [name] [message]` | Marks the pallet with a message or for release. |
+| `shp mark [add, remove, rename] [name] [message]` | Marks the pallet with a message or for release. |
 
 ### Read commands
 
@@ -108,5 +108,5 @@ Every command that changes things must have an undo.
 | `shp unload` | Puts that file back on the pallet |
 | `shp pack` | Unwrap the pallet and stop it from being shipped |
 | `shp ship` | Reverts to the last shipped pallet |
-| `shp port [add|remove]` | Add/remove the last removed/added port |
+| `shp port [add, remove]` | Add/remove the last removed/added port |
 | `shp repack` | Roll back last changed pallet |
