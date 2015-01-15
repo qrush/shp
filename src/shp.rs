@@ -1,4 +1,5 @@
 extern crate getopts;
+extern crate git2;
 use std::os;
 
 fn print_usage(program: &str, opts: &[getopts::OptGroup]) {
