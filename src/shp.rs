@@ -7,6 +7,14 @@ fn print_usage(program: &str, opts: &[getopts::OptGroup]) {
     print!("{}", getopts::usage(brief.as_slice(), opts));
 }
 
+fn print_remotes() {
+     let repo = git2::Repository::open(&Path::new(".")).unwrap();
+     match repo.remotes() {
+         Ok(remotes) => for remote in remotes.iter() { println!("{}", remote.unwrap()) },
+         Err(msg)  => println!("Something went wrong: {}", msg)
+     };
+}
+
 fn main() {
     let args = os::args();
     let ref program = args[0];
@@ -31,6 +39,7 @@ fn main() {
     match command.as_slice() {
         "help"  => print_usage(program.as_slice(), opts),
         "start" => println!("You said start!"),
+        "ports" => print_remotes(),
         _ => print_usage(program.as_slice(), opts),
     }
 }
