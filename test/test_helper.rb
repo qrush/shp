@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-class ShpTest < MiniTest::Test
+class ShpTest < Minitest::Test
   extend Minitest::Spec::DSL
 
   TEST_DIR = "./tmp/test"
