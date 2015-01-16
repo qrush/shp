@@ -9,6 +9,15 @@ fn print_usage(program: &str, opts: &[getopts::OptGroup]) {
     print!("{}", getopts::usage(brief.as_slice(), opts));
 }
 
+fn initialize_port() {
+     let path = Path::new(&".");
+     let opts = git2::RepositoryInitOptions::new();
+     match git2::Repository::init_opts(&path, &opts) {
+         Ok(_) => {},
+         Err(msg) => println!("Could not create a port: {}", msg),
+     };
+}
+
 fn print_remotes() {
      let repo = git2::Repository::open(&Path::new(".")).unwrap();
      match repo.remotes() {
@@ -40,7 +49,7 @@ fn main() {
 
     match command.as_slice() {
         "help"  => print_usage(program.as_slice(), opts),
-        "start" => println!("You said start!"),
+        "start" => initialize_port(),
         "ports" => print_remotes(),
         _ => print_usage(program.as_slice(), opts),
     }
