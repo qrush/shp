@@ -9,8 +9,11 @@ fn print_usage(program: &str, opts: &[getopts::OptGroup]) {
     print!("{}", getopts::usage(brief.as_slice(), opts));
 }
 
-fn initialize_port() {
-     let path = Path::new(&".");
+fn initialize_port(args: &[String]) {
+     let path = match args.first() {
+         Some(p) => Path::new(p),
+         None    => Path::new(&"."),
+     };
      let opts = git2::RepositoryInitOptions::new();
      match git2::Repository::init_opts(&path, &opts) {
          Ok(_) => {},
@@ -48,9 +51,10 @@ fn main() {
         return;
     };
 
+
     match command.as_slice() {
         "help"  => print_usage(program.as_slice(), opts),
-        "start" => initialize_port(),
+        "start" => initialize_port(opt_matches.free.tail()),
         "ports" => print_remotes(),
         _ => print_usage(program.as_slice(), opts),
     }
