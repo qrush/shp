@@ -20,3 +20,12 @@ Scenario: shp start with a name
     Argh! No other ports be known to us yet!
 
     """
+
+Scenario: shp start with a URL
+  When I successfully run `shp start https://github.com/qrush/m.git`
+  When I cd to "m"
+  When I run `shp ports`
+  Then the output should contain exactly:
+    """
+    origin
+    """
