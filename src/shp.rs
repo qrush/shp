@@ -20,9 +20,10 @@ fn initialize_port() {
 
 fn print_remotes() {
      let repo = git2::Repository::open(&Path::new(".")).unwrap();
-     match repo.remotes() {
-         Ok(remotes) => for remote in remotes.iter() { println!("{}", remote.unwrap()) },
-         Err(msg)  => println!("Something went wrong: {}", msg)
+     let remotes = repo.remotes().unwrap();
+     match remotes.len() {
+         0 => println!("Argh! No other ports be known to us yet!"),
+         _ => for remote in remotes.iter() { println!("{}", remote.unwrap()) },
      };
 }
 
