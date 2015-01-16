@@ -4,6 +4,7 @@ version = "0.0.1"
 dependencies = [
  "getopts 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "git2 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
+ "regex_macros 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -79,6 +80,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 name = "pnacl-build-helper"
 version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "regex"
+version = "0.1.10"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "regex_macros"
+version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "regex 0.1.10 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
 [[package]]
 name = "rustc-serialize"

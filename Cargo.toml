@@ -11,3 +11,4 @@ name = "shp"
 [dependencies]
 getopts = "0.1.4"
 git2    = "0.1.10"
+regex_macros = "0.1.5"
