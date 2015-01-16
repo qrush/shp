@@ -8,8 +8,6 @@ authors = [ "Nick Quaranto <nick@quaran.to>" ]
 
 name = "shp"
 
-[dependencies.git2]
-git = "https://github.com/alexcrichton/git2-rs"
-
 [dependencies]
 getopts = "0.1.4"
+git2    = "0.1.10"
