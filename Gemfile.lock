@@ -7,4 +7,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rake
+  rake (~> 10.4.2)
