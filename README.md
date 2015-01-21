@@ -92,7 +92,7 @@ Trying to get this out of my head and on...paper?
 # What's missing
 
 * How to query ports for docks, remove them
-* Rebasing. That's on purpose. Merge always. Sorry.
+* Merge/rebasing, we need to figure that out.
 * Server, daemon, etc. Use git for now.
 * Patches, patch workflow.
 * Ignoring?
