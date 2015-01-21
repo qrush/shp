@@ -1,6 +1,6 @@
 extern crate git2;
 
-pub fn print() {
+pub fn run() {
     let repo = git2::Repository::open(&Path::new(".")).unwrap();
     let remotes = repo.remotes().unwrap();
     match remotes.len() {
