@@ -4,6 +4,7 @@
 
 extern crate regex;
 extern crate getopts;
+extern crate git2;
 
 use std::os;
 

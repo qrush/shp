@@ -1,4 +1,4 @@
-extern crate git2;
+use git2;
 
 pub fn run() {
     let repo = git2::Repository::open(&Path::new(".")).unwrap();
