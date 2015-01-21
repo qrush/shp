@@ -1,6 +1,11 @@
 require 'rake/testtask'
 
-task :default => :test
+task :default => [:build, :test]
+
+desc "Build shp"
+task :build do
+  sh "cargo build"
+end
 
 Rake::TestTask.new do |t|
   t.libs << "test"
