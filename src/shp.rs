@@ -1,12 +1,14 @@
 #![allow(unstable)]
 #![feature(plugin)]
 #[plugin] #[no_link] extern crate regex_macros;
-extern crate regex;
 
+extern crate regex;
 extern crate getopts;
 extern crate git2;
 
 use std::os;
+
+mod commands;
 
 fn print_usage(program: &str, opts: &[getopts::OptGroup]) {
     let brief = format!("Usage: {} [options]", program);
@@ -49,15 +51,6 @@ fn initialize_port(args: &[String]) {
     }
 }
 
-fn print_remotes() {
-     let repo = git2::Repository::open(&Path::new(".")).unwrap();
-     let remotes = repo.remotes().unwrap();
-     match remotes.len() {
-         0 => println!("Argh! No other ports be known to us yet!"),
-         _ => for remote in remotes.iter() { println!("{}", remote.unwrap()) },
-     };
-}
-
 fn main() {
     let args = os::args();
     let ref program = args[0];
@@ -83,7 +76,7 @@ fn main() {
     match command.as_slice() {
         "help"  => print_usage(program.as_slice(), opts),
         "start" => initialize_port(opt_matches.free.tail()),
-        "ports" => print_remotes(),
+        "ports" => commands::ports::print(),
         _ => print_usage(program.as_slice(), opts),
     }
 }
