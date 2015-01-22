@@ -4,7 +4,8 @@ class StartTest < ShpTest
   it "starts with no ports" do
     shp "start"
     output = shp "ports"
-    assert_equal "Argh! No other ports be known to us yet!", output
+    assert_match /No other ports have been added yet!/, output
+    assert ! $?.success?
   end
 
   it "can start with a name" do
@@ -12,7 +13,8 @@ class StartTest < ShpTest
 
     Dir.chdir("foo") do
       output = shp "ports"
-      assert_equal "Argh! No other ports be known to us yet!", output
+      assert_match /No other ports have been added yet!/, output
+      assert ! $?.success?
     end
   end
 
@@ -22,6 +24,7 @@ class StartTest < ShpTest
     Dir.chdir("m") do
       output = shp "ports"
       assert_equal "origin", output
+      assert $?.success?
     end
   end
 end
