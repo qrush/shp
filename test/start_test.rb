@@ -8,7 +8,7 @@ class StartTest < ShpTest
     assert ! $?.success?
   end
 
-  it "can start with a name" do
+  it "starts with a name" do
     shp "start foo"
 
     Dir.chdir("foo") do
@@ -18,13 +18,19 @@ class StartTest < ShpTest
     end
   end
 
-  it "can start with a URL" do
-    shp "start https://github.com/qrush/m.git"
+  {
+    http: "https://github.com/qrush/m.git",
+    ssh: "git@github.com:qrush/m.git",
+    git: "git://github.com/qrush/m.git"
+  }.each do |protocol, url|
+    it "starts with a #{protocol} URL" do
+      shp "start #{url}"
 
-    Dir.chdir("m") do
-      output = shp "ports"
-      assert_equal "origin", output
-      assert $?.success?
+      Dir.chdir("m") do
+        output = shp "ports"
+        assert_equal "origin", output
+        assert $?.success?
+      end
     end
   end
 end
