@@ -38,9 +38,10 @@ fn main() {
 
 
     match command.as_slice() {
-        "help"  => print_usage(program.as_slice(), opts),
-        "start" => commands::start::run(opt_matches.free.tail()),
-        "ports" => commands::ports::run(),
+        "help"   => print_usage(program.as_slice(), opts),
+        "start"  => commands::start::run(opt_matches.free.tail()),
+        "ports"  => commands::ports::run(),
+        "pallet" => commands::pallet::run(),
         _ => print_usage(program.as_slice(), opts),
     }
 }
