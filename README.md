@@ -1,6 +1,6 @@
 # shp
 
-![](http://pirates.missiledine.com/images/ships/shipsection.jpg)
+![](https://user-images.githubusercontent.com/12610/127021727-166ff0f3-5959-4771-8cb3-48917e47d50b.jpg)
 
 A new UI for git. 
 
